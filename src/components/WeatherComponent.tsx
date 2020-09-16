@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   weatherContainer: {
@@ -14,7 +14,11 @@ const styles = StyleSheet.create({
   },
 });
 
-export const WeatherComponent = ({title}) => {
+interface WeatherComponentProps {
+  title: string;
+}
+
+export const WeatherComponent = ({ title }: WeatherComponentProps) => {
   return (
     <View style={styles.weatherContainer}>
       <Text style={styles.title}>{title}</Text>

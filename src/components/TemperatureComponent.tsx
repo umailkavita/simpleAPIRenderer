@@ -1,6 +1,6 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Text, View, StyleSheet } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
   temperatureContainer: {
@@ -22,7 +22,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export const TemperatureComponent = ({title, value}) => {
+interface TemperatureComponentProps {
+  title: string;
+  value: string;
+}
+
+export const TemperatureComponent = ({ title, value }: TemperatureComponentProps) => {
   return (
     <View style={styles.temperatureContainer}>
       <Text style={styles.title}>{`${title} in Kelvin`}</Text>
